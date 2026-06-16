@@ -1,0 +1,14 @@
+# Cloudflare Pages redirects
+
+# WordPress admin/API endpoints - redirect to homepage
+/wp-admin/*     /   301
+/wp-login.php   /   301
+/xmlrpc.php     /   301
+/wp-json/*      /   301
+
+# Old WordPress feed URLs
+/feed/          /   301
+/feed           /   301
+
+# Trailing slash normalization (handled automatically by Cloudflare, but explicit)
+# /kontakt       /kontakt/  301
