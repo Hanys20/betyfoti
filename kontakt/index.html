@@ -102,6 +102,90 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="icon" href="../wp-content/uploads/2024/08/cropped-Bety-logo_Kreslici-platno-1-kopie-10-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../wp-content/uploads/2024/08/cropped-Bety-logo_Kreslici-platno-1-kopie-10-180x180.png" />
 <meta name="msapplication-TileImage" content="https://betyfoti.cz/wp-content/uploads/2024/08/cropped-Bety-logo_Kreslici-platno-1-kopie-10-270x270.png" />
+<link rel='stylesheet' id='wpforms-full-css' href='../wp-content/plugins/wpforms-lite/assets/css/frontend/classic/wpforms-base.min4e32.css?ver=1.9.2' media='all' />
+<style id="bety-form-styles">
+/* ---- Formspree / wpforms layout override ---- */
+.wpforms-container { width: 100%; }
+
+.wpforms-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.wpforms-field { width: 100%; }
+
+.wpforms-field input[type="text"],
+.wpforms-field input[type="email"],
+.wpforms-field input[type="tel"],
+.wpforms-field textarea,
+.wpforms-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d4cbc6;
+  border-radius: 3px;
+  padding: 14px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.07em;
+  color: #575756;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.wpforms-field input:focus,
+.wpforms-field textarea:focus,
+.wpforms-field select:focus {
+  border-color: #9a8f8b;
+}
+
+.wpforms-field input::placeholder,
+.wpforms-field textarea::placeholder {
+  color: #a8a09c;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.wpforms-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.wpforms-field-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #575756;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.wpforms-submit-container { margin-top: 6px; }
+
+.wpforms-submit {
+  background: transparent !important;
+  border: 1px solid #b8afa9 !important;
+  color: #575756 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  padding: 13px 36px !important;
+  cursor: pointer !important;
+  border-radius: 2px !important;
+  transition: background 0.25s, color 0.25s !important;
+  box-shadow: none !important;
+}
+
+.wpforms-submit:hover {
+  background: #575756 !important;
+  color: #fff !important;
+  border-color: #575756 !important;
+}
+</style>
 </head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="wp-singular page-template page-template-elementor_header_footer page page-id-2275 wp-custom-logo wp-embed-responsive wp-theme-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.12.7 ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-2237 elementor-page elementor-page-2275">
