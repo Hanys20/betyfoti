@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+---
+
+<Layout
+  title="BRAND - Fotografka Alžběta Zajíčková"
+  description="Brand fotografie pro podnikatele a firmy — vytvořím vizuální identitu vašeho projektu plnou osobnosti a autenticity."
+  canonical="brand/"
+  ogImage="/wp-content/uploads/2026/02/brand.9.jpg"
+>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <h1>vizuální podoba</h1>
+    <h2 class="script">Vašeho jedinečného projektu</h2>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro-section">
+    <div class="intro-inner" style="max-width:720px">
+      <h2 class="serif-heading" style="font-size:clamp(1.4rem,2.5vw,2rem);color:#3a3330;text-transform:uppercase;letter-spacing:.04em;margin-bottom:1.2rem;">Máte vlastní značku nebo firmu?</h2>
+      <p>
+        Ráda spolupracuji s lidmi, kteří tvoří jedinečné projekty a mají vizi. Pomohu vám vytvořit
+        <strong>vizuální identitu vašeho brandu, zachytit vaši osobnost</strong> a přenést ji do fotografií,
+        které pomohou budovat vztah se zákazníky.
+      </p>
+      <p style="margin-top:1rem">
+        Skrze autentické snímky můžeme vaši značku představit v tom nejlepším světle a
+        <strong>oslovit správnou cílovou skupinu.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- CAROUSEL -->
+  <section style="padding-bottom: 20px;">
+    <div class="swiper brand-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.9.jpg" alt="Brand focení" loading="eager" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2025/02/DSC09196-2.jpg" alt="Detail rukou při nalévání mléka do cappuccina" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.1.jpg" alt="Brand focení" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2025/02/DSC06301.jpg" alt="Hliněný šálek s ceremoniálním kakaem" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2025/02/DSC09204-2.jpg" alt="Tác s kávou a vodou v černobílém stylu" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.5.jpg" alt="Brand focení" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.2.jpg" alt="Brand focení" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2025/02/DSC09080.jpg" alt="Děti hrající si v kavárně" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.8.jpg" alt="Brand focení" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.7.jpg" alt="Brand focení" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.6.jpg" alt="Brand focení" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.4.jpg" alt="Brand focení" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.3.jpg" alt="Brand focení" loading="lazy" /></div>
+        <div class="swiper-slide"><img src="/wp-content/uploads/2026/02/brand.10.jpg" alt="Brand focení" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIVIDUÁLNÍ PŘÍSTUP -->
+  <section class="pricing-section">
+    <div class="pricing-inner">
+      <h2>Individuální přístup ke každému projektu</h2>
+      <p class="pricing-note">
+        Pro brandové focení nemám stanovený fixní ceník, protože každý projekt je jiný a vyžaduje individuální přístup.
+        Stačí se mi ozvat a společně probereme vaše konkrétní potřeby a představy. Jsem otevřená i spolupracím formou
+        barteru či možnosti rozložení platby na splátky.
+      </p>
+      <p class="pricing-note" style="margin-top:1.2rem">
+        Pokud se vám líbí můj styl a chcete, aby vaše značka měla profesionální a autentické fotografie, stačí mi napsat.
+        <strong>Společně vymyslíme vizuální koncept, který vystihne vaši jedinečnost!</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="contact-section" id="formular">
+    <div class="contact-section-inner">
+      <div class="contact-info">
+        <h2>pojďme společně tvořit</h2>
+        <p>Kontaktuj mě přes kontaktní formulář, na telefonní číslo nebo email.</p>
+        <p class="contact-detail">📞 733 670 860</p>
+        <p class="contact-detail">✉ bety.zajickova.foto@seznam.cz</p>
+        <span class="contact-signature">Bety Zajíčková</span>
+      </div>
+      <div>
+        <ContactForm action="https://formspree.io/f/xjgdzglb" />
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .brand-swiper { height: clamp(220px, 40vw, 420px); }
+  .brand-swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+</style>
+
+<script>
+  import Swiper from 'swiper';
+  import { Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+
+  new Swiper('.brand-swiper', {
+    modules: [Autoplay],
+    loop: true,
+    spaceBetween: 3,
+    autoplay: { delay: 3000, disableOnInteraction: false },
+    breakpoints: {
+      0:    { slidesPerView: 2 },
+      768:  { slidesPerView: 3 },
+      1024: { slidesPerView: 4 },
+    },
+  });
+</script>

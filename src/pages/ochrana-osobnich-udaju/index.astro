@@ -1,0 +1,156 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Ochrana osobních údajů - Fotografka Alžběta Zajíčková"
+  description="Informace o zpracování osobních údajů fotografkou Alžbětou Zajíčkovou. GDPR, kontaktní formulář, Google Analytics a vaše práva."
+  canonical="ochrana-osobnich-udaju/"
+  noindex={true}
+>
+
+<section class="gdpr-wrap">
+  <div class="gdpr-hero">
+    <h1>Ochrana osobních údajů</h1>
+    <p class="gdpr-subtitle">Poslední aktualizace: červen 2026</p>
+  </div>
+
+  <div class="gdpr-sections">
+
+    <div class="gdpr-card">
+      <div class="gdpr-num">01</div>
+      <div class="gdpr-body">
+        <h2>Správce osobních údajů</h2>
+        <p><strong>Alžběta Zajíčková</strong><br/>
+        IČO: 21245240<br/>
+        <a href="mailto:bety.zajickova.foto@seznam.cz">bety.zajickova.foto@seznam.cz</a><br/>
+        Tel.: <a href="tel:+420733670860">733 670 860</a></p>
+      </div>
+    </div>
+
+    <div class="gdpr-card">
+      <div class="gdpr-num">02</div>
+      <div class="gdpr-body">
+        <h2>Jaké údaje zpracovávám a proč</h2>
+        <h3>Kontaktní formulář</h3>
+        <p>Zpracovávám jméno, e-mail a obsah zprávy na základě oprávněného zájmu (čl. 6 odst. 1 písm. f) GDPR). Údaje uchovávám maximálně 2 roky.</p>
+        <h3>Google Analytics</h3>
+        <p>Používám anonymizovaná analytická data prostřednictvím služby Google LLC pro zlepšení webu.</p>
+        <h3>Cookies</h3>
+        <p>Web využívá technické a analytické cookies (Google Analytics). Analytické cookies lze zakázat v nastavení prohlížeče.</p>
+      </div>
+    </div>
+
+    <div class="gdpr-card">
+      <div class="gdpr-num">03</div>
+      <div class="gdpr-body">
+        <h2>Komu data předávám</h2>
+        <p>Vaše data neprodávám ani nepředávám pro marketingové účely třetím stranám. Přístup k nim mají pouze:</p>
+        <ul>
+          <li>Poskytovatel hostingu</li>
+          <li>Google LLC (Google Analytics — anonymizovaná data)</li>
+          <li>WPForms / Formspree (zpracování formulářů)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gdpr-card">
+      <div class="gdpr-num">04</div>
+      <div class="gdpr-body">
+        <h2>Vaše práva</h2>
+        <p>Máte právo na přístup ke svým údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku. Svá práva uplatněte e-mailem — odpovím do 30 dnů. Stížnost můžete podat u <a href="https://www.uoou.cz" target="_blank" rel="noopener">ÚOOÚ (uoou.cz)</a>.</p>
+      </div>
+    </div>
+
+    <div class="gdpr-card">
+      <div class="gdpr-num">05</div>
+      <div class="gdpr-body">
+        <h2>Zabezpečení</h2>
+        <p>Web je provozován přes HTTPS. Vaše údaje uchovávám pouze po dobu nezbytně nutnou.</p>
+      </div>
+    </div>
+
+    <div class="gdpr-card gdpr-card-cta">
+      <div class="gdpr-num">06</div>
+      <div class="gdpr-body">
+        <h2>Kontakt</h2>
+        <p><a href="mailto:bety.zajickova.foto@seznam.cz">bety.zajickova.foto@seznam.cz</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</Layout>
+
+<style>
+  .gdpr-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+    font-family: var(--font-sans);
+  }
+  .gdpr-hero { text-align: center; margin-bottom: 56px; }
+  .gdpr-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #3a3330;
+    font-weight: 400;
+    margin: 0 0 .5rem;
+  }
+  .gdpr-subtitle {
+    color: var(--color-mid);
+    font-size: .78rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .gdpr-sections { display: flex; flex-direction: column; gap: 24px; }
+  .gdpr-card {
+    display: flex;
+    gap: 28px;
+    background: #faf8f7;
+    border: 1px solid rgba(87,87,86,.1);
+    border-radius: 6px;
+    padding: 32px 28px;
+  }
+  .gdpr-num {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: rgba(87,87,86,.12);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 48px;
+  }
+  .gdpr-body h2 {
+    font-family: var(--font-sans);
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: var(--color-mid);
+    margin: 0 0 1rem;
+  }
+  .gdpr-body h3 {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin: 1.2rem 0 .4rem;
+  }
+  .gdpr-body p, .gdpr-body li {
+    font-size: .9rem;
+    color: #7a6f6c;
+    line-height: 1.75;
+  }
+  .gdpr-body ul { padding-left: 1.2rem; list-style: disc; }
+  .gdpr-body li { margin-bottom: .4rem; }
+  .gdpr-body a { color: var(--color-dark); }
+  .gdpr-body a:hover { color: #3a3330; }
+  .gdpr-card-cta { background: var(--color-beige); border-color: transparent; }
+  .gdpr-card-cta .gdpr-body a { font-weight: 500; font-size: .95rem; letter-spacing: .05em; }
+
+  @media (max-width: 600px) {
+    .gdpr-card { padding: 22px 20px; gap: 16px; }
+    .gdpr-num { font-size: 2rem; min-width: 36px; }
+  }
+</style>

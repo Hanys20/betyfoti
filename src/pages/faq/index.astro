@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqItems = [
+  {
+    q: 'Kde fotím?',
+    a: 'Nejčastěji fotím v okolí Olomouce a Opavy, nicméně není problém se domluvit i na jiných lokacích. Zatím mým nejoblíbenějším ateliérem je příroda, a proto bych Vás ráda vzala právě tam! Pojďme naše focení pojmout spíše jako procházku někam do lesů, na louky, k jezeru nebo na hory! Ale vlastně jsem poslední dobou objevila také i kouzlo hezkých uliček ve městě. A proto budu úplně nejvíc ráda, když mě vezmete právě na místa Vašim srdcím nejbližší! Co takto využít tento čas k odpočinku, procházce na čerstvém vzduchu, odhození starostí a prostě jen být tady a teď?',
+    open: true,
+  },
+  {
+    q: 'Jaká je doba dodání fotek?',
+    a: 'Na své fotky se můžete těšit nejpozději do čtrnácti dní. Nicméně většinou je doba trvání kratší.',
+  },
+  {
+    q: 'Jak dlouho focení trvá?',
+    a: 'Převážně se pohybuje v rozmezí 1 až 2 hodin. Nicméně si neplánuji více focení za sebou, abych měla na vás dostatek prostoru, tudíž spolu můžeme strávit dle potřeby i více!',
+  },
+  {
+    q: 'Co si na focení obléct?',
+    a: 'Oblečení volte co nejjednodušší. Vyhněte se křiklavým barvám, výrazným vzorům a nápisům. V rámci fotografované skupiny se pokuste sladit. Volte nadčasové kousky a materiály, které neomrzí ani za pár desítek let. Barvy oblečení a celkový styling fotografie můžeme společně zkonzultovat v rámci našeho domlouvání termínu, kdy vám zašlu také nějaké taháčky co můžete zvolit :).',
+  },
+  {
+    q: 'Nejlepší způsob, jak se se mnou spojit?',
+    a: 'Nejlepším a nejjednodušším způsobem je kontaktní formulář. Poté si můžeme domluvit osobní schůzku nebo také online hovor.',
+  },
+  {
+    q: 'Co když nebude vhodné počasí?',
+    a: 'Za nevhodné počasí považuji silný déšť, vítr nebo husté sněžení. V takovém případě se domluvíme na změně termínu. Pokud je pod mrakem či mlha, nevidím důvod focení rušit nebo přesouvat. Naopak takové počasí dodává fotkám další skvělou dynamiku!',
+  },
+  {
+    q: 'Přirozené, upřímné, autentické?',
+    a: 'Mnoho lidí se obává, že přirozené a autentické focení znamená, že nebudou mít žádné fotky, na kterých se dívají do objektivu. Nemusíte mít strach – na takové snímky si uděláme čas. Hlavní důraz však kladu na zachycení přirozených momentů, propojení, pohybu a detailů.',
+  },
+  {
+    q: 'Co když neumím pózovat?',
+    a: 'Nemusíte se bát, že byste nevěděli, jak pózovat nebo jak se před fotoaparátem chovat. Během focení vás povedu a pomůžu vám do póz, které budou na fotkách vypadat uvolněně a autenticky, takže si to můžete opravdu užít.',
+  },
+];
+---
+
+<Layout
+  title="FAQ - Fotografka Alžběta Zajíčková"
+  description="Odpovědi na nejčastější otázky — kde fotím, jak to probíhá, co zahrnuje balíček a jak se objednat. Fotím v okolí Olomouce a Opavy."
+  canonical="faq/"
+>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <h1>FAQ - časté dotazy</h1>
+    <h2 class="script">a odpovědi na ně</h2>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      {faqItems.map((item, i) => (
+        <div class={`faq-item${item.open ? ' open' : ''}`} data-faq>
+          <button class="faq-question" aria-expanded={item.open ? 'true' : 'false'}>
+            {item.q}
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            {item.a}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section style="text-align:center;padding:40px 24px 80px;">
+    <p style="font-size:.95rem;color:var(--color-light);line-height:1.75;">
+      <strong>Nevidíte něco, co byste potřebovali zodpovědět?</strong><br/>
+      <strong>Neváhejte a napište mi.</strong>
+    </p>
+    <a href="/kontakt/" class="btn" style="margin-top:1.6rem">Napsat Bety</a>
+  </section>
+
+</Layout>
+
+<script>
+  document.querySelectorAll('[data-faq]').forEach(item => {
+    const btn = item.querySelector('.faq-question') as HTMLButtonElement;
+    btn?.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('[data-faq].open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

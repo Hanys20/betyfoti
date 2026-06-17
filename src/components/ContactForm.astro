@@ -1,0 +1,36 @@
+---
+interface Props {
+  action: string;
+  type?: 'standard' | 'wedding';
+}
+
+const { action, type = 'standard' } = Astro.props;
+---
+
+<form class="bety-form" method="POST" action={action}>
+  {type === 'wedding' ? (
+    <>
+      <input type="text" name="jmena" placeholder="VAŠE CELÁ JMÉNA" required />
+      <input type="text" name="datum_svatby" placeholder="DATUM SVATBY" required />
+      <input type="text" name="misto_svatby" placeholder="MÍSTO SVATBY" required />
+      <input type="email" name="email" placeholder="E-MAIL" required />
+      <input type="tel" name="telefon" placeholder="TELEFON" required />
+    </>
+  ) : (
+    <>
+      <input type="text" name="jmeno" placeholder="JMÉNO A PŘÍJMENÍ" required />
+      <input type="email" name="email" placeholder="E-MAIL" required />
+      <input type="tel" name="telefon" placeholder="TELEFON" required />
+    </>
+  )}
+  <textarea name="zprava" placeholder="NAPIŠTE MI, CO MÁTE NA SRDCI . . ." required></textarea>
+  <select name="zdroj">
+    <option value="" disabled selected>JAK JSI SE O MNĚ DOZVĚDĚL/A?</option>
+    <option value="na doporučení">Na doporučení</option>
+    <option value="přes internet">Přes internet</option>
+    <option value="na sociálních sítích">Na sociálních sítích</option>
+  </select>
+  <div class="form-submit">
+    <button type="submit" class="btn">POSLAT ZPRÁVU</button>
+  </div>
+</form>

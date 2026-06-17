@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="CO FOTÍM - Fotografka Alžběta Zajíčková"
+  description="Fotím lásku ve všech podobách — svatby, příběhy párů a rodin, brand focení. Přirozené a autentické fotografie z Olomouce."
+  canonical="co-fotim/"
+  ogImage="/wp-content/uploads/2024/10/Pribehy-opraveny.png"
+>
+
+  <section class="page-hero">
+    <h1 class="script-heading" style="font-size:clamp(3rem,7vw,5.5rem);color:#3a3330;">co fotím?</h1>
+    <p class="hero-sub-text">Prostě lásku v různých podobách a všechny (ne)obyčejné střípky z vašeho (ne)všedního života.</p>
+  </section>
+
+  <section>
+    <div class="category-grid">
+      <a href="/pribehy/" class="category-card">
+        <img src="/wp-content/uploads/2024/10/Pribehy-opraveny.png" alt="Matka s dcerami při procházce lesem" loading="lazy" />
+        <span class="category-card-label">Příběhy</span>
+      </a>
+      <a href="/svatby/" class="category-card">
+        <img src="/wp-content/uploads/2024/10/Svatby-opraveny.png" alt="Nevěsta a ženich se líbají pod svatební bránou" loading="lazy" />
+        <span class="category-card-label">Svatby</span>
+      </a>
+      <a href="/brand/" class="category-card">
+        <img src="/wp-content/uploads/2024/10/Brand-opraveny.png" alt="Detailní záběr na šálek cappuccina" loading="lazy" />
+        <span class="category-card-label">Brand</span>
+      </a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .hero-sub-text {
+    font-size: .95rem;
+    color: #7a6f6c;
+    max-width: 480px;
+    margin: .8rem auto 0;
+    line-height: 1.75;
+  }
+  .category-card { aspect-ratio: 3/4; }
+  @media (max-width: 768px) {
+    .category-card { aspect-ratio: 4/3; }
+  }
+</style>
