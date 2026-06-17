@@ -207,73 +207,244 @@ class="hfeed site" id="page">
 		</div>	<div id="content" class="site-content">
 		<div class="ast-container">
 
-<div style="max-width:860px;margin:60px auto 80px;padding:0 24px;font-family:'DM Sans',sans-serif;color:#575756;line-height:1.8;">
+<style>
+.gdpr-wrap {
+  max-width: 860px;
+  margin: 0 auto 80px;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: #575756;
+  line-height: 1.8;
+}
 
-  <h1 style="font-family:'Betty Serif',serif;font-size:2.4rem;font-weight:400;color:#575756;margin-bottom:8px;">Ochrana osobních údajů</h1>
-  <p style="color:#9a8f8b;margin-bottom:48px;">Poslední aktualizace: červen 2026</p>
+/* Hero */
+.gdpr-hero {
+  background: #F1ECEA;
+  padding: 64px 40px 52px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+.gdpr-hero h1 {
+  font-family: 'Betty Serif', serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #575756;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+.gdpr-hero .gdpr-subtitle {
+  color: #9a8f8b;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
 
-  <section style="margin-bottom:40px;">
-    <h2 style="font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#575756;margin-bottom:12px;">1. Správce osobních údajů</h2>
-    <p>Správcem osobních údajů je:</p>
-    <p style="margin:12px 0 0 0;">
-      <strong>Alžběta Zajíčková</strong><br>
-      IČO: 21245240<br>
-      E-mail: <a href="mailto:bety.zajickova.foto@seznam.cz" style="color:#575756;">bety.zajickova.foto@seznam.cz</a><br>
-      Tel.: 7&#51;&#51;&nbsp;&#54;70&nbsp;8&#54;0
-    </p>
-  </section>
+/* Cards */
+.gdpr-sections {
+  padding: 0 28px;
+}
+.gdpr-card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: #faf8f7;
+  border: 1px solid #ede8e5;
+  border-radius: 4px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+.gdpr-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: #575756;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  letter-spacing: 0;
+}
+.gdpr-body {
+  flex: 1;
+  min-width: 0;
+}
+.gdpr-body h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #575756;
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+.gdpr-body h3 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #575756;
+  margin: 20px 0 6px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.gdpr-body p {
+  margin: 0 0 10px;
+  font-size: 0.97rem;
+}
+.gdpr-body p:last-child { margin-bottom: 0; }
+.gdpr-body ul {
+  padding-left: 0;
+  margin: 8px 0 10px;
+  list-style: none;
+}
+.gdpr-body ul li {
+  padding: 5px 0 5px 20px;
+  position: relative;
+  font-size: 0.97rem;
+}
+.gdpr-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c5b8b3;
+}
+.gdpr-body a {
+  color: #575756;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.gdpr-body a:hover { color: #9a8f8b; }
 
-  <section style="margin-bottom:40px;">
-    <h2 style="font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#575756;margin-bottom:12px;">2. Jaké údaje zpracovávám a proč</h2>
+/* Contact CTA card */
+.gdpr-card-cta {
+  background: #575756;
+  border-color: #575756;
+}
+.gdpr-card-cta .gdpr-num {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+}
+.gdpr-card-cta .gdpr-body h2 {
+  color: #fff;
+}
+.gdpr-card-cta .gdpr-body p {
+  color: rgba(255,255,255,0.85);
+}
+.gdpr-card-cta .gdpr-body a {
+  color: #F1ECEA;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 4px;
+  border-bottom: 1px solid rgba(241,236,234,0.4);
+  padding-bottom: 2px;
+}
+.gdpr-card-cta .gdpr-body a:hover {
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,0.7);
+}
 
-    <h3 style="font-size:1rem;font-weight:600;color:#575756;margin:24px 0 8px;">Kontaktní formulář</h3>
-    <p>Při vyplnění kontaktního formuláře zpracovávám jméno, e-mailovou adresu a obsah zprávy. Tyto údaje slouží výhradně k zodpovězení vašeho dotazu nebo k domluvení focení. Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR). Údaje uchovávám po dobu nezbytnou k vyřízení vašeho požadavku, nejdéle 2 roky.</p>
+@media (max-width: 600px) {
+  .gdpr-hero { padding: 48px 24px 40px; }
+  .gdpr-hero h1 { font-size: 2rem; }
+  .gdpr-sections { padding: 0 16px; }
+  .gdpr-card { padding: 22px 20px; gap: 16px; }
+}
+</style>
 
-    <h3 style="font-size:1rem;font-weight:600;color:#575756;margin:24px 0 8px;">Google Analytics</h3>
-    <p>Tento web používá Google Analytics ke sledování návštěvnosti. Analytika sbírá anonymizovaná data — neidentifikuje vás jako konkrétní osobu. Data jsou zpracovávána společností Google LLC. Více informací: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:#575756;">Google Privacy Policy</a>.</p>
+<div class="gdpr-wrap">
 
-    <h3 style="font-size:1rem;font-weight:600;color:#575756;margin:24px 0 8px;">Cookies</h3>
-    <p>Web používá technické cookies nutné pro správné fungování stránek a analytické cookies Google Analytics. Pokud s analytickými cookies nesouhlasíte, můžete jejich ukládání zakázat v nastavení svého prohlížeče.</p>
-  </section>
+  <div class="gdpr-hero">
+    <h1>Ochrana osobních údajů</h1>
+    <p class="gdpr-subtitle">Poslední aktualizace: červen 2026</p>
+  </div>
 
-  <section style="margin-bottom:40px;">
-    <h2 style="font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#575756;margin-bottom:12px;">3. Komu data předávám</h2>
-    <p>Osobní údaje neprodávám ani nepředávám třetím stranám za účelem marketingu. Mohou k nim mít přístup:</p>
-    <ul style="padding-left:20px;margin:8px 0;">
-      <li>poskytovatel hostingu (v rámci provozování webu),</li>
-      <li>Google LLC (Google Analytics — anonymizovaná data),</li>
-      <li>WPForms (zpracování kontaktního formuláře).</li>
-    </ul>
-    <p>Veškeré předávání probíhá na základě smluvních záruk v souladu s GDPR.</p>
-  </section>
+  <div class="gdpr-sections">
 
-  <section style="margin-bottom:40px;">
-    <h2 style="font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#575756;margin-bottom:12px;">4. Vaše práva</h2>
-    <p>V souladu s GDPR máte právo:</p>
-    <ul style="padding-left:20px;margin:8px 0;">
-      <li><strong>na přístup</strong> — dozvědět se, jaké údaje o vás zpracovávám,</li>
-      <li><strong>na opravu</strong> — požádat o opravu nepřesných údajů,</li>
-      <li><strong>na výmaz</strong> — požádat o smazání údajů (pokud nejsou potřeba pro plnění právní povinnosti),</li>
-      <li><strong>na omezení zpracování</strong>,</li>
-      <li><strong>na přenositelnost údajů</strong>,</li>
-      <li><strong>vznést námitku</strong> proti zpracování na základě oprávněného zájmu.</li>
-    </ul>
-    <p style="margin-top:16px;">Svá práva uplatníte e-mailem na <a href="mailto:bety.zajickova.foto@seznam.cz" style="color:#575756;">bety.zajickova.foto@seznam.cz</a>. Na vaši žádost odpovím do 30 dnů.</p>
-    <p style="margin-top:12px;">Máte také právo podat stížnost u dozorového orgánu — <a href="https://www.uoou.cz" target="_blank" rel="noopener" style="color:#575756;">Úřadu pro ochranu osobních údajů (uoou.cz)</a>.</p>
-  </section>
+    <div class="gdpr-card">
+      <div class="gdpr-num">1</div>
+      <div class="gdpr-body">
+        <h2>Správce osobních údajů</h2>
+        <p>Správcem osobních údajů je:</p>
+        <p>
+          <strong>Alžběta Zajíčková</strong><br>
+          IČO: 21245240<br>
+          E-mail: <a href="mailto:bety.zajickova.foto@seznam.cz">bety.zajickova.foto@seznam.cz</a><br>
+          Tel.: 7&#51;&#51;&nbsp;&#54;70&nbsp;8&#54;0
+        </p>
+      </div>
+    </div>
 
-  <section style="margin-bottom:40px;">
-    <h2 style="font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#575756;margin-bottom:12px;">5. Zabezpečení</h2>
-    <p>Veškerá komunikace na webu probíhá přes zabezpečené HTTPS připojení. Osobní údaje uchovávám pouze po nezbytně nutnou dobu.</p>
-  </section>
+    <div class="gdpr-card">
+      <div class="gdpr-num">2</div>
+      <div class="gdpr-body">
+        <h2>Jaké údaje zpracovávám a proč</h2>
+        <h3>Kontaktní formulář</h3>
+        <p>Při vyplnění kontaktního formuláře zpracovávám jméno, e-mailovou adresu a obsah zprávy. Tyto údaje slouží výhradně k zodpovězení vašeho dotazu nebo k domluvení focení. Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR). Údaje uchovávám po dobu nezbytnou k vyřízení vašeho požadavku, nejdéle 2 roky.</p>
+        <h3>Google Analytics</h3>
+        <p>Tento web používá Google Analytics ke sledování návštěvnosti. Analytika sbírá anonymizovaná data — neidentifikuje vás jako konkrétní osobu. Data jsou zpracovávána společností Google LLC. Více informací: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+        <h3>Cookies</h3>
+        <p>Web používá technické cookies nutné pro správné fungování stránek a analytické cookies Google Analytics. Pokud s analytickými cookies nesouhlasíte, můžete jejich ukládání zakázat v nastavení svého prohlížeče.</p>
+      </div>
+    </div>
 
-  <section>
-    <h2 style="font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#575756;margin-bottom:12px;">6. Kontakt</h2>
-    <p>Máte-li jakékoli dotazy týkající se zpracování vašich osobních údajů, neváhejte mě kontaktovat:</p>
-    <p style="margin-top:12px;">
-      <a href="mailto:bety.zajickova.foto@seznam.cz" style="color:#575756;font-weight:600;">bety.zajickova.foto@seznam.cz</a>
-    </p>
-  </section>
+    <div class="gdpr-card">
+      <div class="gdpr-num">3</div>
+      <div class="gdpr-body">
+        <h2>Komu data předávám</h2>
+        <p>Osobní údaje neprodávám ani nepředávám třetím stranám za účelem marketingu. Mohou k nim mít přístup:</p>
+        <ul>
+          <li>poskytovatel hostingu (v rámci provozování webu),</li>
+          <li>Google LLC (Google Analytics — anonymizovaná data),</li>
+          <li>WPForms (zpracování kontaktního formuláře).</li>
+        </ul>
+        <p>Veškeré předávání probíhá na základě smluvních záruk v souladu s GDPR.</p>
+      </div>
+    </div>
+
+    <div class="gdpr-card">
+      <div class="gdpr-num">4</div>
+      <div class="gdpr-body">
+        <h2>Vaše práva</h2>
+        <p>V souladu s GDPR máte právo:</p>
+        <ul>
+          <li><strong>na přístup</strong> — dozvědět se, jaké údaje o vás zpracovávám,</li>
+          <li><strong>na opravu</strong> — požádat o opravu nepřesných údajů,</li>
+          <li><strong>na výmaz</strong> — požádat o smazání údajů (pokud nejsou potřeba pro plnění právní povinnosti),</li>
+          <li><strong>na omezení zpracování</strong>,</li>
+          <li><strong>na přenositelnost údajů</strong>,</li>
+          <li><strong>vznést námitku</strong> proti zpracování na základě oprávněného zájmu.</li>
+        </ul>
+        <p>Svá práva uplatníte e-mailem na <a href="mailto:bety.zajickova.foto@seznam.cz">bety.zajickova.foto@seznam.cz</a>. Na vaši žádost odpovím do 30 dnů.</p>
+        <p>Máte také právo podat stížnost u dozorového orgánu — <a href="https://www.uoou.cz" target="_blank" rel="noopener">Úřadu pro ochranu osobních údajů (uoou.cz)</a>.</p>
+      </div>
+    </div>
+
+    <div class="gdpr-card">
+      <div class="gdpr-num">5</div>
+      <div class="gdpr-body">
+        <h2>Zabezpečení</h2>
+        <p>Veškerá komunikace na webu probíhá přes zabezpečené HTTPS připojení. Osobní údaje uchovávám pouze po nezbytně nutnou dobu.</p>
+      </div>
+    </div>
+
+    <div class="gdpr-card gdpr-card-cta">
+      <div class="gdpr-num">6</div>
+      <div class="gdpr-body">
+        <h2>Kontakt</h2>
+        <p>Máte-li jakékoli dotazy týkající se zpracování vašich osobních údajů, neváhejte mě kontaktovat:</p>
+        <a href="mailto:bety.zajickova.foto@seznam.cz">bety.zajickova.foto@seznam.cz</a>
+      </div>
+    </div>
+
+  </div>
 
 </div>
 
